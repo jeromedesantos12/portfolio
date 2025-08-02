@@ -2,6 +2,8 @@ const hamburger = document.querySelector(`#hamburger`);
 const navMenu = document.querySelector(`#nav-menu`);
 const home = document.querySelector(`#home`);
 const toTop = document.querySelector(`#to-top`);
+const darkToggle = document.querySelector(`#dark-toggle`);
+const html = document.querySelector(`html`);
 
 // Nav menu toggle
 hamburger.addEventListener(`click`, () => {
@@ -32,9 +34,6 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(home);
 
 // Darkmode toggle
-const darkToggle = document.querySelector(`#dark-toggle`);
-const html = document.querySelector(`html`);
-
 darkToggle.addEventListener(`click`, () => {
   if (darkToggle.checked) {
     html.classList.add(`dark`);
